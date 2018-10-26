@@ -12,11 +12,13 @@ namespace {
         EXPECT_EQ(chassis_sent_data_bf, 0);
         EXPECT_EQ(chassis_sent_data_lr, 0);
     }
+
     TEST(ChassisSystemTest, TestMultipleInitialize) {
         ChassisSystem* chassisSystem = new ChassisSystem();
         EXPECT_TRUE(chassisSystem->initialize());
         EXPECT_FALSE(chassisSystem->initialize());
     }
+
     TEST(ChassisSystemTest, TestDestroy) {
         ChassisSystem* chassisSystem = new ChassisSystem();
         EXPECT_FALSE(chassisSystem->destroy());
@@ -27,6 +29,7 @@ namespace {
         EXPECT_EQ(chassis_sent_data_bf, 0);
         EXPECT_EQ(chassis_sent_data_lr, 0);
     }
+
     TEST(ChassisSystemTest, TestUpdate) {
         ChassisSystem* chassisSystem = new ChassisSystem();
         chassisSystem->BackForward = 2;
@@ -35,6 +38,7 @@ namespace {
         EXPECT_EQ(chassis_sent_data_bf, 2);
         EXPECT_EQ(chassis_sent_data_lr, 3);
     }
+
     TEST(ChassisSystemTest, TestData) {
         ChassisSystem* chassisSystem = new ChassisSystem();
         chassisSystem->initialize();
