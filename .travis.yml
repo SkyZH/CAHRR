@@ -1,0 +1,13 @@
+language:
+  - cpp
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+
+script:
+  - cmake -H. -Bbuild
+  - cd build
+  - cmake --build .
+  - ./test/CHARR_test
