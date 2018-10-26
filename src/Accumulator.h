@@ -1,0 +1,19 @@
+//
+// Created by Alex Chi on 2018/10/26.
+//
+
+#ifndef CHARR_ACCUMULATOR_H
+#define CHARR_ACCUMULATOR_H
+
+
+class Accumulator {
+public:
+    int sum_data, n;
+    Accumulator();
+    void reset();
+    void data(int data);
+    int sum();
+};
+
+
+#endif //CHARR_ACCUMULATOR_H
