@@ -14,10 +14,15 @@ private:
     bool initialized;
 public:
     MockChassisSystem();
+
     bool initialize();
+
     bool update();
+
     bool destroy();
+
     bool data();
+
     bool setSpeed(double bf, double lr);
 
     int BackForward, LeftRight;

@@ -9,9 +9,13 @@
 class Accumulator {
 public:
     int sum_data, n;
+
     Accumulator();
+
     void reset();
+
     void data(int data);
+
     int sum();
 };
 

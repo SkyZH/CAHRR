@@ -8,9 +8,16 @@
 class CANSystem {
 public:
     CANSystem() = default;
+
     virtual bool initialize() = 0;
+
     virtual bool destroy() = 0;
+
     virtual bool update() = 0;
+
     virtual bool set(int id, uint16_t data) = 0;
+
+    virtual uint16_t get(int id, int data_id) = 0;
 };
+
 #endif //CAHRR_CANSYSTEM_H

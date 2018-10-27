@@ -8,16 +8,16 @@
 
 namespace {
     TEST(SwitchTaskTest, TestInitialize) {
-        MockTask* mockTask = new MockTask;
-        SwitchTask* task = new SwitchTask(new MockTask, mockTask);
+        MockTask *mockTask = new MockTask;
+        SwitchTask *task = new SwitchTask(new MockTask, mockTask);
         ASSERT_TRUE(task->initialize(true));
         ASSERT_EQ(task->selected, true);
         ASSERT_TRUE(mockTask->initialized);
     }
 
     TEST(SwitchTaskTest, TestUpdate) {
-        MockTask* mockTask = new MockTask;
-        SwitchTask* task = new SwitchTask(mockTask, new MockTask);
+        MockTask *mockTask = new MockTask;
+        SwitchTask *task = new SwitchTask(mockTask, new MockTask);
         ASSERT_TRUE(task->initialize(false));
         ASSERT_TRUE(task->update());
         ASSERT_EQ(mockTask->update_count, 1);
@@ -26,9 +26,9 @@ namespace {
     }
 
     TEST(SwitchTaskTest, TestSwitch) {
-        MockTask* mockTask1 = new MockTask;
-        MockTask* mockTask2 = new MockTask;
-        SwitchTask* task = new SwitchTask(mockTask1, mockTask2);
+        MockTask *mockTask1 = new MockTask;
+        MockTask *mockTask2 = new MockTask;
+        SwitchTask *task = new SwitchTask(mockTask1, mockTask2);
         ASSERT_TRUE(task->initialize(false));
         ASSERT_TRUE(mockTask1->initialized);
         ASSERT_FALSE(mockTask2->initialized);
@@ -45,9 +45,9 @@ namespace {
     }
 
     TEST(SwitchTaskTest, TestDestroy) {
-        MockTask* mockTask1 = new MockTask;
-        MockTask* mockTask2 = new MockTask;
-        SwitchTask* task = new SwitchTask(mockTask1, mockTask2);
+        MockTask *mockTask1 = new MockTask;
+        MockTask *mockTask2 = new MockTask;
+        SwitchTask *task = new SwitchTask(mockTask1, mockTask2);
         ASSERT_TRUE(task->initialize(false));
         ASSERT_TRUE(mockTask1->initialized);
         ASSERT_FALSE(mockTask2->initialized);
@@ -63,9 +63,9 @@ namespace {
     }
 
     TEST(SwitchTaskTest, TestSelfSwitch) {
-        MockTask* mockTask1 = new MockTask;
-        MockTask* mockTask2 = new MockTask;
-        SwitchTask* task = new SwitchTask(mockTask1, mockTask2);
+        MockTask *mockTask1 = new MockTask;
+        MockTask *mockTask2 = new MockTask;
+        SwitchTask *task = new SwitchTask(mockTask1, mockTask2);
         ASSERT_TRUE(task->initialize(false));
         ASSERT_TRUE(mockTask1->initialized);
         ASSERT_FALSE(mockTask2->initialized);

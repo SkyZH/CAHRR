@@ -9,7 +9,7 @@
 
 namespace {
     TEST(MockTaskTest, TestInitialize) {
-        MockTask* task = new MockTask;
+        MockTask *task = new MockTask;
         task->update_count = 2333;
         ASSERT_TRUE(task->initialize());
         ASSERT_TRUE(task->initialized);
@@ -18,7 +18,7 @@ namespace {
     }
 
     TEST(MockTaskTest, TestDestroy) {
-        MockTask* task = new MockTask;
+        MockTask *task = new MockTask;
         ASSERT_TRUE(task->initialize());
         ASSERT_TRUE(task->destroy());
         ASSERT_FALSE(task->initialized);
@@ -26,7 +26,7 @@ namespace {
     }
 
     TEST(MockTaskTest, TestUpdate) {
-        MockTask* task = new MockTask;
+        MockTask *task = new MockTask;
         ASSERT_TRUE(task->initialize());
         ASSERT_TRUE(task->update());
         ASSERT_EQ(task->update_count, 1);

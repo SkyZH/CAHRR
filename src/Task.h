@@ -9,9 +9,13 @@
 class Task {
 public:
     Task() = default;
+
     virtual bool initialize() = 0;
+
     virtual bool destroy() = 0;
+
     virtual bool isEnd() { return false; }
+
     virtual bool update() = 0;
 };
 

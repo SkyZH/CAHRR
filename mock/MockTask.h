@@ -12,9 +12,13 @@
 class MockTask : public Task {
 public:
     MockTask();
+
     bool initialize();
+
     bool destroy();
+
     bool update();
+
     bool initialized;
     int update_count, initialize_count, destroy_count;
 };

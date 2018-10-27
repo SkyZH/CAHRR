@@ -19,7 +19,7 @@ void Accumulator::data(int data) {
 }
 
 int Accumulator::sum() {
-    int result =  this->sum_data / this->n;
+    int result = this->sum_data / this->n;
     this->reset();
     return result;
 }

@@ -7,15 +7,16 @@
 
 namespace {
     TEST(AccumulatorTest, TestReset) {
-        Accumulator* accumulator = new Accumulator;
-        accumulator->n = 233; accumulator->sum_data = 23333;
+        Accumulator *accumulator = new Accumulator;
+        accumulator->n = 233;
+        accumulator->sum_data = 23333;
         accumulator->reset();
         EXPECT_EQ(accumulator->n, 0);
         EXPECT_EQ(accumulator->sum_data, 0);
     }
 
     TEST(AccumulatorTest, TestData) {
-        Accumulator* accumulator = new Accumulator;
+        Accumulator *accumulator = new Accumulator;
         accumulator->reset();
         accumulator->data(2);
         accumulator->data(3);
@@ -25,7 +26,7 @@ namespace {
     }
 
     TEST(AccumulatorTest, TestSum) {
-        Accumulator* accumulator = new Accumulator;
+        Accumulator *accumulator = new Accumulator;
         accumulator->reset();
         accumulator->data(2);
         accumulator->data(3);

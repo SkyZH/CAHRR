@@ -12,10 +12,15 @@ public:
     DebugSystem() = default;
 
     virtual bool initialize() = 0;
-    virtual bool error(const char* &src, const char* &message) = 0;
-    virtual bool info(const char* &src, const char* &message) = 0;
+
+    virtual bool error(const char *&src, const char *&message) = 0;
+
+    virtual bool info(const char *&src, const char *&message) = 0;
+
     virtual bool error(const std::string &src, const std::string &message) = 0;
+
     virtual bool info(const std::string &src, const std::string &message) = 0;
+
     virtual bool destroy() = 0;
 };
 
