@@ -4,18 +4,21 @@
 
 #include "MockIMUSystem.h"
 
+int imu_data[100];
+
 bool MockIMUSystem::initialize() {
-    return false;
+    return true;
 }
 
 bool MockIMUSystem::destroy() {
-    return false;
+    return true;
 }
 
 bool MockIMUSystem::update() {
-    return false;
+    for (int i = 0; i < 10; i++) this->IMUData[i] = imu_data[i];
+    return true;
 }
 
 uint16_t MockIMUSystem::get(int data) {
-    return 0;
+    return this->IMUData[data];
 }

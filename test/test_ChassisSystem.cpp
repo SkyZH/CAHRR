@@ -22,7 +22,7 @@ namespace {
     TEST(ChassisSystemTest, TestDestroy) {
         MockChassisSystem *chassisSystem = new MockChassisSystem();
         EXPECT_FALSE(chassisSystem->destroy());
-        chassisSystem->initialize();
+        EXPECT_TRUE(chassisSystem->initialize());
         chassis_sent_data_bf = 233;
         chassis_sent_data_lr = 233;
         EXPECT_TRUE(chassisSystem->destroy());
@@ -32,6 +32,7 @@ namespace {
 
     TEST(ChassisSystemTest, TestUpdate) {
         MockChassisSystem *chassisSystem = new MockChassisSystem();
+        EXPECT_TRUE(chassisSystem->initialize());
         chassisSystem->BackForward = 2;
         chassisSystem->LeftRight = 3;
         EXPECT_TRUE(chassisSystem->update());
@@ -41,14 +42,14 @@ namespace {
 
     TEST(ChassisSystemTest, TestData) {
         MockChassisSystem *chassisSystem = new MockChassisSystem();
-        chassisSystem->initialize();
+        EXPECT_TRUE(chassisSystem->initialize());
         EXPECT_TRUE(chassisSystem->data());
     }
 
     TEST(ChassisSystemTest, TestSetSpeed) {
         MockChassisSystem *chassisSystem = new MockChassisSystem();
-        chassisSystem->initialize();
-        chassisSystem->setSpeed(1, 3);
+        EXPECT_TRUE(chassisSystem->initialize());
+        EXPECT_TRUE(chassisSystem->setSpeed(1, 3));
         EXPECT_EQ(chassisSystem->LeftRight, 3);
         EXPECT_EQ(chassisSystem->BackForward, 1);
     }

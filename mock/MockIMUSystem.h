@@ -9,7 +9,11 @@
 
 #include "../src/IMUSystem.h"
 
+extern int imu_data[100];
+
 class MockIMUSystem : public IMUSystem {
+private:
+    int IMUData[100] = { 0 };
 public:
     MockIMUSystem() = default;
 

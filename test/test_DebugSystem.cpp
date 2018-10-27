@@ -9,30 +9,33 @@
 namespace {
     TEST(DebugSystemTest, TestInitialize) {
         MockDebugSystem *debugSystem = new MockDebugSystem;
-        ASSERT_TRUE(debugSystem->initialize());
-        ASSERT_EQ(logged_data, "[DebugSystem][I] 0 system initialized");
+        EXPECT_TRUE(debugSystem->initialize());
+        EXPECT_EQ(logged_data, "[DebugSystem][I] 0 system initialized");
     }
 
     TEST(DebugSystemTest, TestInfo) {
         MockDebugSystem *debugSystem = new MockDebugSystem;
-        ASSERT_TRUE(debugSystem->info("MockSystem", "test message"));
-        ASSERT_EQ(logged_data, "[MockSystem][I] 0 test message");
-        ASSERT_TRUE(debugSystem->info(std::string("MockSystem"), "test message 2"));
-        ASSERT_EQ(logged_data, "[MockSystem][I] 0 test message 2");
+        EXPECT_TRUE(debugSystem->initialize());
+        EXPECT_TRUE(debugSystem->info("MockSystem", "test message"));
+        EXPECT_EQ(logged_data, "[MockSystem][I] 0 test message");
+        EXPECT_TRUE(debugSystem->info(std::string("MockSystem"), "test message 2"));
+        EXPECT_EQ(logged_data, "[MockSystem][I] 0 test message 2");
     }
 
     TEST(DebugSystemTest, TestError) {
         MockDebugSystem *debugSystem = new MockDebugSystem;
-        ASSERT_TRUE(debugSystem->error("MockSystem", "test message"));
-        ASSERT_EQ(logged_data, "[MockSystem][E] 0 test message");
-        ASSERT_TRUE(debugSystem->error(std::string("MockSystem"), "test message 2"));
-        ASSERT_EQ(logged_data, "[MockSystem][E] 0 test message 2");
+        EXPECT_TRUE(debugSystem->initialize());
+        EXPECT_TRUE(debugSystem->error("MockSystem", "test message"));
+        EXPECT_EQ(logged_data, "[MockSystem][E] 0 test message");
+        EXPECT_TRUE(debugSystem->error(std::string("MockSystem"), "test message 2"));
+        EXPECT_EQ(logged_data, "[MockSystem][E] 0 test message 2");
     }
 
     TEST(DebugSystemTest, TestDestroy) {
         MockDebugSystem *debugSystem = new MockDebugSystem;
-        ASSERT_TRUE(debugSystem->destroy());
-        ASSERT_EQ(logged_data, "[DebugSystem][I] 0 system halted");
+        EXPECT_TRUE(debugSystem->initialize());
+        EXPECT_TRUE(debugSystem->destroy());
+        EXPECT_EQ(logged_data, "[DebugSystem][I] 0 system halted");
     }
 }
 
