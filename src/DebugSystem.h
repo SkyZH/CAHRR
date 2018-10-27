@@ -21,6 +21,12 @@ public:
 
     virtual bool info(const std::string &src, const std::string &message) = 0;
 
+    virtual bool set_led(int id, bool val) = 0;
+
+    virtual bool toggle_led(int id) = 0;
+
+    virtual bool alive() = 0;
+
     virtual bool destroy() = 0;
 };
 

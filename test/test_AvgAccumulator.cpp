@@ -3,11 +3,11 @@
 //
 
 #include "gtest/gtest.h"
-#include "Accumulator.h"
+#include "AvgAccumulator.h"
 
 namespace {
-    TEST(AccumulatorTest, TestReset) {
-        Accumulator *accumulator = new Accumulator;
+    TEST(AvgAccumulatorTest, TestReset) {
+        AvgAccumulator *accumulator = new AvgAccumulator;
         accumulator->n = 233;
         accumulator->sum_data = 23333;
         accumulator->reset();
@@ -15,8 +15,8 @@ namespace {
         EXPECT_EQ(accumulator->sum_data, 0);
     }
 
-    TEST(AccumulatorTest, TestData) {
-        Accumulator *accumulator = new Accumulator;
+    TEST(AvgAccumulatorTest, TestData) {
+        AvgAccumulator *accumulator = new AvgAccumulator;
         accumulator->reset();
         accumulator->data(2);
         accumulator->data(3);
@@ -25,8 +25,8 @@ namespace {
         EXPECT_EQ(accumulator->sum_data, 9);
     }
 
-    TEST(AccumulatorTest, TestSum) {
-        Accumulator *accumulator = new Accumulator;
+    TEST(AvgAccumulatorTest, TestSum) {
+        AvgAccumulator *accumulator = new AvgAccumulator;
         accumulator->reset();
         accumulator->data(2);
         accumulator->data(3);

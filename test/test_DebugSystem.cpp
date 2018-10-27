@@ -37,5 +37,18 @@ namespace {
         EXPECT_TRUE(debugSystem->destroy());
         EXPECT_EQ(logged_data, "[DebugSystem][I] 0 system halted");
     }
+
+    TEST(DebugSystemTest, TestLED) {
+        MockDebugSystem *debugSystem = new MockDebugSystem;
+        EXPECT_TRUE(debugSystem->initialize());
+        EXPECT_TRUE(debugSystem->toggle_led(1));
+        EXPECT_TRUE(debugSystem->set_led(1, true));
+    }
+
+    TEST(DebugSystemTest, TestAlive) {
+        MockDebugSystem *debugSystem = new MockDebugSystem;
+        EXPECT_TRUE(debugSystem->initialize());
+        EXPECT_TRUE(debugSystem->alive());
+    }
 }
 

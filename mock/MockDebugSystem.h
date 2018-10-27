@@ -30,6 +30,12 @@ public:
     bool info(const std::string &src, const std::string &message);
 
     bool destroy();
+
+    bool set_led(int id, bool val);
+
+    bool toggle_led(int id);
+
+    bool alive() override;
 };
 
 

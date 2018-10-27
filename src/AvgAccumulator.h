@@ -2,15 +2,15 @@
 // Created by Alex Chi on 2018/10/26.
 //
 
-#ifndef CAHRR_ACCUMULATOR_H
-#define CAHRR_ACCUMULATOR_H
+#ifndef CAHRR_AVGACCUMULATOR_H
+#define CAHRR_AVGACCUMULATOR_H
 
 
-class Accumulator {
+class AvgAccumulator {
 public:
     int sum_data, n;
 
-    Accumulator();
+    AvgAccumulator();
 
     void reset();
 
@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif //CAHRR_ACCUMULATOR_H
+#endif //CAHRR_AVGACCUMULATOR_H

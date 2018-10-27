@@ -2,23 +2,23 @@
 // Created by Alex Chi on 2018/10/26.
 //
 
-#include "Accumulator.h"
+#include "AvgAccumulator.h"
 
-Accumulator::Accumulator() {
+AvgAccumulator::AvgAccumulator() {
     this->reset();
 }
 
-void Accumulator::reset() {
+void AvgAccumulator::reset() {
     this->sum_data = 0;
     this->n = 0;
 }
 
-void Accumulator::data(int data) {
+void AvgAccumulator::data(int data) {
     this->sum_data += data;
     this->n++;
 }
 
-int Accumulator::sum() {
+int AvgAccumulator::sum() {
     int result = this->sum_data / this->n;
     this->reset();
     return result;

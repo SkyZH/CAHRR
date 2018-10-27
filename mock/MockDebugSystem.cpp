@@ -41,3 +41,15 @@ bool MockDebugSystem::_info(const std::string &src, const std::string &message) 
     logged_data = "[" + src + "][I] " + "0" + " " + message;
     return true;
 }
+
+bool MockDebugSystem::set_led(int id, bool val) {
+    return true;
+}
+
+bool MockDebugSystem::toggle_led(int id) {
+    return true;
+}
+
+bool MockDebugSystem::alive() {
+    return true;
+}

@@ -20,14 +20,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8b01f510-b8e9-4b6a-958b-d19c8bdb4534" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/MockIMUSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mock/MockIMUSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/MockIMUSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/mock/MockIMUSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/MockDebugSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mock/MockDebugSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/MockDebugSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/mock/MockDebugSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/AvgAccumulator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accumulator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/AvgAccumulator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DebugSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/DebugSystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_CANSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_CANSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_ChassisSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_ChassisSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_Accumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_AvgAccumulator.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_DebugSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_DebugSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_SwitchTask.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_SwitchTask.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_Task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_Task.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/CMakeFiles/" />
@@ -52,9 +53,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="59" />
+          <entry key="cpp" value="71" />
           <entry key="gitignore" value="2" />
-          <entry key="h" value="32" />
+          <entry key="h" value="40" />
           <entry key="in" value="1" />
           <entry key="md" value="1" />
           <entry key="txt" value="10" />
@@ -64,16 +65,16 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="11" />
-          <entry key="ObjectiveC" value="91" />
+          <entry key="ObjectiveC" value="111" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="4671" />
+          <entry key="cpp" value="5847" />
           <entry key="gitignore" value="15" />
-          <entry key="h" value="2292" />
+          <entry key="h" value="2597" />
           <entry key="in" value="24" />
           <entry key="md" value="4" />
           <entry key="txt" value="662" />
@@ -83,14 +84,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="686" />
-          <entry key="ObjectiveC" value="6963" />
+          <entry key="ObjectiveC" value="8444" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="YAML" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="Google Test" value="37" />
+          <entry key="Google Test" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -99,61 +100,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_CANSystem.cpp">
+        <entry file="file://$PROJECT_DIR$/src/RotateAccumulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-              <folding>
-                <element signature="e#45#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_ChassisSystem.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-              <folding>
-                <element signature="e#45#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_Accumulator.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-149">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IMUSystem.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="306">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_IMUSystem.cpp">
+        <entry file="file://$PROJECT_DIR$/test/test_RotateAccumulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            <state relative-caret-position="513">
+              <caret line="231" column="51" selection-start-line="231" selection-start-column="51" selection-end-line="231" selection-end-column="51" />
               <folding>
                 <element signature="e#45#69#0" expanded="true" />
               </folding>
@@ -162,40 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_DebugSystem.cpp">
+        <entry file="file://$PROJECT_DIR$/src/RotateAccumulator.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-              <folding>
-                <element signature="e#45#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/MockDebugSystem.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/MockIMUSystem.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/MockIMUSystem.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="170">
+              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -213,6 +142,7 @@
     <findStrings>
       <find>CHARR</find>
       <find>ASSERT</find>
+      <find>accumulator-&gt;sum();</find>
     </findStrings>
     <replaceStrings>
       <replace>CAHRR</replace>
@@ -249,8 +179,6 @@
         <option value="$PROJECT_DIR$/src/MockDebugSystem.h" />
         <option value="$PROJECT_DIR$/src/MockDebugSystem.cpp" />
         <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/mock/MockDebugSystem.h" />
-        <option value="$PROJECT_DIR$/src/DebugSystem.h" />
         <option value="$PROJECT_DIR$/src/Task.h" />
         <option value="$PROJECT_DIR$/src/SwitchTask.h" />
         <option value="$PROJECT_DIR$/src/SwitchTask.cpp" />
@@ -268,8 +196,17 @@
         <option value="$PROJECT_DIR$/mock/MockIMUSystem.cpp" />
         <option value="$PROJECT_DIR$/test/test_ChassisSystem.cpp" />
         <option value="$PROJECT_DIR$/test/test_CANSystem.cpp" />
-        <option value="$PROJECT_DIR$/test/test_DebugSystem.cpp" />
         <option value="$PROJECT_DIR$/test/test_IMUSystem.cpp" />
+        <option value="$PROJECT_DIR$/mock/MockDebugSystem.h" />
+        <option value="$PROJECT_DIR$/src/AvgAccumulator.h" />
+        <option value="$PROJECT_DIR$/src/AvgAccumulator.cpp" />
+        <option value="$PROJECT_DIR$/test/test_AvgAccumulator.cpp" />
+        <option value="$PROJECT_DIR$/src/DebugSystem.h" />
+        <option value="$PROJECT_DIR$/mock/MockDebugSystem.cpp" />
+        <option value="$PROJECT_DIR$/test/test_DebugSystem.cpp" />
+        <option value="$PROJECT_DIR$/src/RotateAccumulator.h" />
+        <option value="$PROJECT_DIR$/src/RotateAccumulator.cpp" />
+        <option value="$PROJECT_DIR$/test/test_RotateAccumulator.cpp" />
       </list>
     </option>
   </component>
@@ -422,44 +359,44 @@
       <workItem from="1540556993611" duration="3206000" />
       <workItem from="1540560313949" duration="7672000" />
       <workItem from="1540608699423" duration="78000" />
-      <workItem from="1540642115595" duration="3694000" />
+      <workItem from="1540642115595" duration="7170000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.10.27 at 20h 39m 47s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 14m 40s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 20h 41m 54s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 15m 12s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 20h 47m 39s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 15m 30s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 20h 48m 10s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 16m 11s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 20h 49m 50s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 16m 46s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 20h 54m 48s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 18m 07s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 20h 59m 58s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 18m 25s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 21h 03m 58s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 19m 04s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 21h 07m 42s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 19m 23s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.10.27 at 21h 14m 00s.xml">
+    <history-entry file="All_Tests - 2018.10.27 at 22h 19m 58s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14784000" />
+    <option name="totallyTimeSpent" value="18260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,20 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Accumulator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Accumulator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -618,27 +541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockDebugSystem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#110#127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/MockTask.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DebugSystem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="24" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -691,24 +597,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockDebugSystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/MockIMUSystem.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -729,27 +621,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_Accumulator.cpp">
+    <entry file="file://$PROJECT_DIR$/src/AvgAccumulator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="374">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_CANSystem.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding>
-            <element signature="e#45#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_DebugSystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="349">
+          <caret line="42" column="18" selection-end-line="49" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />
           </folding>
@@ -758,8 +640,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_IMUSystem.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="221">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="e#45#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_AvgAccumulator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AvgAccumulator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DebugSystem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/MockDebugSystem.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/MockDebugSystem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding>
+            <element signature="e#110#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_DebugSystem.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="50" column="42" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+          <folding>
+            <element signature="e#45#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RotateAccumulator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RotateAccumulator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_RotateAccumulator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="231" column="51" selection-start-line="231" selection-start-column="51" selection-end-line="231" selection-end-column="51" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />
           </folding>
