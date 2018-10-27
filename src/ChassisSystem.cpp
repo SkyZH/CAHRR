@@ -33,3 +33,9 @@ bool ChassisSystem::destroy() {
 bool ChassisSystem::data() {
     return true;
 }
+
+bool ChassisSystem::setSpeed(int bf, int lr) {
+    this->BackForward = bf;
+    this->LeftRight = lr;
+    return true;
+}

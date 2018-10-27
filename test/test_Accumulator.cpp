@@ -2,10 +2,6 @@
 // Created by Alex Chi on 2018/10/26.
 //
 
-//
-// Created by Alex Chi on 2018/10/26.
-//
-
 #include "gtest/gtest.h"
 #include "Accumulator.h"
 

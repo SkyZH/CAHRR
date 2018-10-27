@@ -44,5 +44,13 @@ namespace {
         chassisSystem->initialize();
         EXPECT_TRUE(chassisSystem->data());
     }
+
+    TEST(ChassisSystemTest, TestSetSpeed) {
+        ChassisSystem* chassisSystem = new ChassisSystem();
+        chassisSystem->initialize();
+        chassisSystem->setSpeed(1, 3);
+        EXPECT_EQ(chassisSystem->LeftRight, 3);
+        EXPECT_EQ(chassisSystem->BackForward, 1);
+    }
 }
 

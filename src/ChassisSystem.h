@@ -16,6 +16,7 @@ public:
     bool update();
     bool destroy();
     bool data();
+    bool setSpeed(int bf, int lr);
 
     int BackForward, LeftRight;
 };
