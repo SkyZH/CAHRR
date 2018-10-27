@@ -1,24 +1,16 @@
 //
-// Created by Alex Chi on 2018/10/26.
+// Created by Alex Chi on 2018/10/27.
 //
 
-#ifndef CHARR_CHASSISSYSTEM_H
-#define CHARR_CHASSISSYSTEM_H
-
-extern int chassis_sent_data_bf, chassis_sent_data_lr;
-
+#ifndef CAHRR_CHASSISSYSTEM_H
+#define CAHRR_CHASSISSYSTEM_H
 class ChassisSystem {
 private:
-    bool initialized;
 public:
-    ChassisSystem();
-    bool initialize();
-    bool update();
-    bool destroy();
-    bool data();
-    bool setSpeed(int bf, int lr);
-
-    int BackForward, LeftRight;
+    ChassisSystem() = default;
+    virtual bool initialize() = 0;
+    virtual bool update() = 0;
+    virtual bool destroy() = 0;
+    virtual bool setSpeed(double bf, double lr) = 0;
 };
-
-#endif //CHARR_CHASSISSYSTEM_H
+#endif //CAHRR_CHASSISSYSTEM_H

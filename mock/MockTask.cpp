@@ -3,6 +3,7 @@
 //
 
 #include "MockTask.h"
+#define CAHRR_MOCK_INCLUDED
 
 MockTask::MockTask() {
     this->initialized = false;

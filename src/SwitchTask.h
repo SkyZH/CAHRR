@@ -15,6 +15,7 @@ public:
     SwitchTask(Task* task1, Task* task2);
     bool select(bool task);
     bool initialize(bool initial_status);
+    bool initialize();
     bool destroy();
     bool update();
     bool selected;

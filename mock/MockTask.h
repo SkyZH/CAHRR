@@ -5,7 +5,9 @@
 #ifndef CAHRR_MOCKTASK_H
 #define CAHRR_MOCKTASK_H
 
-#include "Task.h"
+#define CAHRR_MOCK_INCLUDED
+
+#include "../src/Task.h"
 
 class MockTask : public Task {
 public:

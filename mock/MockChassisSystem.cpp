@@ -2,27 +2,27 @@
 // Created by Alex Chi on 2018/10/26.
 //
 
-#include "ChassisSystem.h"
+#include "MockChassisSystem.h"
 
-int chassis_sent_data_bf, chassis_sent_data_lr;
+double chassis_sent_data_bf, chassis_sent_data_lr;
 
-ChassisSystem::ChassisSystem() {
+MockChassisSystem::MockChassisSystem() {
     this->initialized = false;
 }
 
-bool ChassisSystem::initialize() {
+bool MockChassisSystem::initialize() {
     if (this->initialized) return false;
     this->initialized = true;
     return true;
 }
 
-bool ChassisSystem::update() {
+bool MockChassisSystem::update() {
     chassis_sent_data_lr = this->LeftRight;
     chassis_sent_data_bf = this->BackForward;
     return true;
 }
 
-bool ChassisSystem::destroy() {
+bool MockChassisSystem::destroy() {
     if (!this->initialized) return false;
     this->initialized = false;
     chassis_sent_data_bf = 0;
@@ -30,11 +30,11 @@ bool ChassisSystem::destroy() {
     return true;
 }
 
-bool ChassisSystem::data() {
+bool MockChassisSystem::data() {
     return true;
 }
 
-bool ChassisSystem::setSpeed(int bf, int lr) {
+bool MockChassisSystem::setSpeed(double bf, double lr) {
     this->BackForward = bf;
     this->LeftRight = lr;
     return true;

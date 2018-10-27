@@ -47,3 +47,7 @@ bool SwitchTask::update() {
         return this->task2->update();
     }
 }
+
+bool SwitchTask::initialize() {
+    return this->initialize(false);
+}

@@ -2,8 +2,8 @@
 // Created by Alex Chi on 2018/10/26.
 //
 
-#ifndef CHARR_ACCUMULATOR_H
-#define CHARR_ACCUMULATOR_H
+#ifndef CAHRR_ACCUMULATOR_H
+#define CAHRR_ACCUMULATOR_H
 
 
 class Accumulator {
@@ -16,4 +16,4 @@ public:
 };
 
 
-#endif //CHARR_ACCUMULATOR_H
+#endif //CAHRR_ACCUMULATOR_H

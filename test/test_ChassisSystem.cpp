@@ -3,24 +3,24 @@
 //
 
 #include "gtest/gtest.h"
-#include "ChassisSystem.h"
+#include "mock/MockChassisSystem.h"
 
 namespace {
     TEST(ChassisSystemTest, TestInitialize) {
-        ChassisSystem* chassisSystem = new ChassisSystem();
+        MockChassisSystem* chassisSystem = new MockChassisSystem();
         EXPECT_TRUE(chassisSystem->initialize());
         EXPECT_EQ(chassis_sent_data_bf, 0);
         EXPECT_EQ(chassis_sent_data_lr, 0);
     }
 
     TEST(ChassisSystemTest, TestMultipleInitialize) {
-        ChassisSystem* chassisSystem = new ChassisSystem();
+        MockChassisSystem* chassisSystem = new MockChassisSystem();
         EXPECT_TRUE(chassisSystem->initialize());
         EXPECT_FALSE(chassisSystem->initialize());
     }
 
     TEST(ChassisSystemTest, TestDestroy) {
-        ChassisSystem* chassisSystem = new ChassisSystem();
+        MockChassisSystem* chassisSystem = new MockChassisSystem();
         EXPECT_FALSE(chassisSystem->destroy());
         chassisSystem->initialize();
         chassis_sent_data_bf = 233;
@@ -31,7 +31,7 @@ namespace {
     }
 
     TEST(ChassisSystemTest, TestUpdate) {
-        ChassisSystem* chassisSystem = new ChassisSystem();
+        MockChassisSystem* chassisSystem = new MockChassisSystem();
         chassisSystem->BackForward = 2;
         chassisSystem->LeftRight = 3;
         EXPECT_TRUE(chassisSystem->update());
@@ -40,13 +40,13 @@ namespace {
     }
 
     TEST(ChassisSystemTest, TestData) {
-        ChassisSystem* chassisSystem = new ChassisSystem();
+        MockChassisSystem* chassisSystem = new MockChassisSystem();
         chassisSystem->initialize();
         EXPECT_TRUE(chassisSystem->data());
     }
 
     TEST(ChassisSystemTest, TestSetSpeed) {
-        ChassisSystem* chassisSystem = new ChassisSystem();
+        MockChassisSystem* chassisSystem = new MockChassisSystem();
         chassisSystem->initialize();
         chassisSystem->setSpeed(1, 3);
         EXPECT_EQ(chassisSystem->LeftRight, 3);

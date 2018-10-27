@@ -5,6 +5,8 @@
 #include "gtest/gtest.h"
 #include "MockTask.h"
 
+#define CAHRR_MOCK_INCLUDED
+
 namespace {
     TEST(MockTaskTest, TestInitialize) {
         MockTask* task = new MockTask;
