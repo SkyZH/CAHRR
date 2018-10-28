@@ -74,5 +74,18 @@ namespace {
         EXPECT_EQ(mockTask1->destroy_count, 0);
     }
 
+    TEST(SwitchTaskTest, TestNullSwitch) {
+        MockTask *mockTask1 = new MockTask;
+        SwitchTask *task = new SwitchTask(mockTask1, NULL);
+        EXPECT_TRUE(task->initialize(false));
+        EXPECT_TRUE(mockTask1->initialized);
+        EXPECT_TRUE(task->select(false));
+        EXPECT_TRUE(task->select(true));
+        EXPECT_TRUE(task->update());
+        EXPECT_TRUE(task->select(false));
+        EXPECT_TRUE(task->select(true));
+        EXPECT_TRUE(task->destroy());
+    }
+
 }
 

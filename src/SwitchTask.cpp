@@ -14,11 +14,11 @@ bool SwitchTask::select(bool task) {
     } else {
         this->selected = task;
         if (!task) {
-            if (!this->task2->destroy()) return false;
-            return this->task1->initialize();
+            if (!this->destroy_task(task2)) return false;
+            return this->initialize_task(task1);
         } else {
-            if (!this->task1->destroy()) return false;
-            return this->task2->initialize();
+            if (!this->destroy_task(task1)) return false;
+            return this->initialize_task(task2);
         }
     }
 }
@@ -26,28 +26,43 @@ bool SwitchTask::select(bool task) {
 bool SwitchTask::initialize(bool initial_status) {
     this->selected = initial_status;
     if (!this->selected) {
-        return this->task1->initialize();
+        return this->initialize_task(task1);
     } else {
-        return this->task2->initialize();
+        return this->initialize_task(task2);
     }
 }
 
 bool SwitchTask::destroy() {
     if (!this->selected) {
-        return this->task1->destroy();
+        return this->destroy_task(task1);
     } else {
-        return this->task2->destroy();
+        return this->destroy_task(task2);
     }
 }
 
 bool SwitchTask::update() {
     if (!this->selected) {
-        return this->task1->update();
+        return this->update_task(task1);
     } else {
-        return this->task2->update();
+        return this->update_task(task2);
     }
 }
 
 bool SwitchTask::initialize() {
     return this->initialize(false);
+}
+
+bool SwitchTask::destroy_task(Task *task) {
+    if (!task) return true;
+    return task->destroy();
+}
+
+bool SwitchTask::initialize_task(Task *task) {
+    if (!task) return true;
+    return task->initialize();
+}
+
+bool SwitchTask::update_task(Task *task) {
+    if (!task) return true;
+    return task->update();
 }

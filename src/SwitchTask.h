@@ -11,6 +11,13 @@ class SwitchTask : public Task {
 private:
     Task *task1;
     Task *task2;
+
+    bool initialize_task(Task *task);
+
+    bool destroy_task(Task *task);
+
+    bool update_task(Task *task);
+
 public:
     SwitchTask(Task *task1, Task *task2);
 
