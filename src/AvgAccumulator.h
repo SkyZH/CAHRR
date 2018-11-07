@@ -8,15 +8,16 @@
 
 class AvgAccumulator {
 public:
-    int sum_data, n;
+    long long sum_data;
+    int n;
 
     AvgAccumulator();
 
     void reset();
 
-    void data(int data);
+    void data(long long data);
 
-    int sum();
+    long long sum();
 };
 
 

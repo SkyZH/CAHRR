@@ -8,18 +8,19 @@
 
 class RotateAccumulator {
 public:
-    int round, overflow, lst_data, max_data, offset_data;
+    long long round, overflow, lst_data, max_data, offset_data;
+
     bool do_calibrate;
 
-    RotateAccumulator(int max_data);
+    RotateAccumulator(long long max_data);
 
     void reset();
 
-    void data(int data);
+    void data(long long data);
 
-    int get_round();
+    long long get_round();
 
-    int get_overflow();
+    long long get_overflow();
 
     void calibrate();
 };

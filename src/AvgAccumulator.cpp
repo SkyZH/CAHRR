@@ -13,13 +13,13 @@ void AvgAccumulator::reset() {
     this->n = 0;
 }
 
-void AvgAccumulator::data(int data) {
+void AvgAccumulator::data(long long data) {
     this->sum_data += data;
     this->n++;
 }
 
-int AvgAccumulator::sum() {
-    int result = this->sum_data / this->n;
+long long AvgAccumulator::sum() {
+    long long result = this->sum_data / this->n;
     this->reset();
     return result;
 }
