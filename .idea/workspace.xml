@@ -2,12 +2,12 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
+      <config projectName="CAHRR" targetName="CAHRR" />
       <config projectName="CAHRR" targetName="gmock" />
-      <config projectName="CAHRR" targetName="gmock_main" />
       <config projectName="CAHRR" targetName="CAHRR_main" />
       <config projectName="CAHRR" targetName="gtest_main" />
       <config projectName="CAHRR" targetName="gtest" />
-      <config projectName="CAHRR" targetName="CAHRR" />
+      <config projectName="CAHRR" targetName="gmock_main" />
       <config projectName="CAHRR" targetName="CAHRR_test" />
     </generated>
   </component>
@@ -19,10 +19,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b01f510-b8e9-4b6a-958b-d19c8bdb4534" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PIDAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PIDAccumulator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PIDAccumulator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/PIDAccumulator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
@@ -38,15 +36,15 @@
     <session id="38594313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -70,7 +68,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="8420" />
+          <entry key="cpp" value="8442" />
           <entry key="gitignore" value="15" />
           <entry key="h" value="3785" />
           <entry key="in" value="24" />
@@ -82,14 +80,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="686" />
-          <entry key="ObjectiveC" value="12205" />
+          <entry key="ObjectiveC" value="12227" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="YAML" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="Google Test" value="71" />
+          <entry key="Google Test" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -100,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="306">
               <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
             </state>
           </provider>
@@ -118,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+            <state relative-caret-position="102">
+              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -127,7 +125,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_PIDAccumulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="224">
               <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="e#45#69#0" expanded="true" />
@@ -377,17 +375,12 @@
       <workItem from="1541596620965" duration="1833000" />
       <workItem from="1541607822597" duration="324000" />
       <workItem from="1541771746519" duration="660000" />
-      <workItem from="1541774155038" duration="1369000" />
+      <workItem from="1541774155038" duration="1419000" />
+      <workItem from="1541781486976" duration="19000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.10.28 at 18h 45m 03s.xml">
-      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_Tests - 2018.10.28 at 18h 45m 11s.xml">
-      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_Tests - 2018.11.07 at 21h 46m 05s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -412,9 +405,15 @@
     <history-entry file="All_Tests - 2018.11.09 at 23h 02m 36s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_Tests - 2018.11.09 at 23h 02m 45s.xml">
+      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_Tests - 2018.11.10 at 00h 38m 19s.xml">
+      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24639000" />
+    <option name="totallyTimeSpent" value="24708000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,7 +425,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="850" y="0" width="830" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.31218275" />
@@ -785,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="306">
           <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
         </state>
       </provider>
@@ -799,14 +798,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        <state relative-caret-position="102">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_PIDAccumulator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="224">
           <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />

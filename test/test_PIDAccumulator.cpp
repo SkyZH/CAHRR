@@ -34,7 +34,7 @@ namespace {
         EXPECT_TRUE(pid->set_output(-300.0, 300.0));
         EXPECT_TRUE(pid->reset());
         EXPECT_GT(pid->calc(1), 0);
-        EXPECT_LT(pid->calc(0.5), 0);
+        EXPECT_GT(pid->calc(0.5), 0);
         EXPECT_GT(pid->calc(0.1), 0);
     }
     TEST(PIDRateAccumulatorTest, TestCalc) {
@@ -43,7 +43,7 @@ namespace {
         EXPECT_TRUE(pid->set_output(-300.0, 300.0));
         EXPECT_TRUE(pid->reset());
         EXPECT_GT(pid->calc(1), 0);
-        EXPECT_LT(pid->calc(0.5), 0);
+        EXPECT_GT(pid->calc(0.5), 0);
         EXPECT_GT(pid->calc(0.1), 0);
     }
 }

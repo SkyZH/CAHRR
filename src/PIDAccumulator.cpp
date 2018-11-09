@@ -4,7 +4,7 @@
 
 #include "PIDAccumulator.h"
 
-inline double PID_clamp(double result, double max_result, double min_result) {
+inline double PID_clamp(double result, double min_result, double max_result) {
     return result < min_result ? min_result : (result > max_result ? max_result : result);
 }
 bool PIDAccumulator::set_pid(double Kp, double Ki, double Kd) {
