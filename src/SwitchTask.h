@@ -8,10 +8,11 @@
 #include "Task.h"
 
 class SwitchTask : public Task {
-private:
+protected:
     Task *task1;
     Task *task2;
 
+private:
     bool initialize_task(Task *task);
 
     bool destroy_task(Task *task);
@@ -21,15 +22,15 @@ private:
 public:
     SwitchTask(Task *task1, Task *task2);
 
-    bool select(bool task);
+    virtual bool select(bool task);
 
-    bool initialize(bool initial_status);
+    virtual bool initialize(bool initial_status);
 
-    bool initialize();
+    virtual bool initialize();
 
-    bool destroy();
+    virtual bool destroy();
 
-    bool update();
+    virtual bool update();
 
     bool selected;
 };
