@@ -2,13 +2,14 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
+      <config projectName="CAHRR" targetName="gtest" />
+      <config projectName="CAHRR" targetName="CAHRR_main" />
+      <config projectName="CAHRR" targetName="gmock_main" />
+      <config projectName="CAHRR" targetName="CAHRR_mock" />
+      <config projectName="CAHRR" targetName="CAHRR_test" />
+      <config projectName="CAHRR" targetName="gtest_main" />
       <config projectName="CAHRR" targetName="CAHRR" />
       <config projectName="CAHRR" targetName="gmock" />
-      <config projectName="CAHRR" targetName="CAHRR_main" />
-      <config projectName="CAHRR" targetName="gtest_main" />
-      <config projectName="CAHRR" targetName="gtest" />
-      <config projectName="CAHRR" targetName="gmock_main" />
-      <config projectName="CAHRR" targetName="CAHRR_test" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -20,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b01f510-b8e9-4b6a-958b-d19c8bdb4534" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PIDAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PIDAccumulator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/CMakeFiles/" />
@@ -36,15 +37,15 @@
     <session id="38594313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,13 +55,13 @@
           <entry key="h" value="59" />
           <entry key="in" value="1" />
           <entry key="md" value="1" />
-          <entry key="txt" value="11" />
+          <entry key="txt" value="14" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="12" />
+          <entry key="CMakeLists.txt" value="15" />
           <entry key="ObjectiveC" value="152" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="1" />
@@ -73,13 +74,13 @@
           <entry key="h" value="3785" />
           <entry key="in" value="24" />
           <entry key="md" value="4" />
-          <entry key="txt" value="662" />
+          <entry key="txt" value="763" />
           <entry key="yml" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="686" />
+          <entry key="CMakeLists.txt" value="787" />
           <entry key="ObjectiveC" value="12227" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="YAML" value="40" />
@@ -87,7 +88,7 @@
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="Google Test" value="73" />
+          <entry key="Google Test" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -100,6 +101,33 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mock/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="234" selection-start-line="2" selection-start-column="234" selection-end-line="2" selection-end-column="234" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="285" selection-start-line="8" selection-start-column="285" selection-end-line="8" selection-end-column="285" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -122,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_PIDAccumulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="612">
               <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="e#45#69#0" expanded="true" />
@@ -151,6 +179,7 @@
       <find>this-&gt;task2-&gt;destroy()</find>
       <find>this-&gt;task2-&gt;destroy())</find>
       <find>max_data</find>
+      <find>mock/</find>
     </findStrings>
     <replaceStrings>
       <replace>CAHRR</replace>
@@ -167,8 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/Task.cpp" />
         <option value="$PROJECT_DIR$/src/MockTask.h" />
@@ -178,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/MockChassisSystem.cpp" />
         <option value="$PROJECT_DIR$/src/MockDebugSystem.h" />
         <option value="$PROJECT_DIR$/src/MockDebugSystem.cpp" />
-        <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Task.h" />
         <option value="$PROJECT_DIR$/mock/MockChassisSystem.cpp" />
         <option value="$PROJECT_DIR$/mock/MockChassisSystem.h" />
@@ -218,6 +244,9 @@
         <option value="$PROJECT_DIR$/src/PIDAccumulator.h" />
         <option value="$PROJECT_DIR$/src/PIDAccumulator.cpp" />
         <option value="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" />
+        <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/mock/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -227,7 +256,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="850" />
     <option name="width" value="830" />
     <option name="height" value="1050" />
@@ -316,6 +345,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CAHRR_mock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CAHRR" TARGET_NAME="CAHRR_mock" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CAHRR_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CAHRR" TARGET_NAME="CAHRR_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CAHRR" RUN_TARGET_NAME="CAHRR_test">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -341,6 +375,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration xmlns:elmot-ocd="https://github.com/elmot/clion-embedded-arm" default="true" type="elmot.embedded.openocd.conf.type" factoryName="elmot.embedded.openocd.conf.factory" singleton="false" PASS_PARENT_ENVS_2="true" elmot-ocd:gdb-port="3333" elmot-ocd:telnet-port="4444" elmot-ocd:reset-type="INIT" elmot-ocd:download-type="ALWAYS">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.CAHRR" />
@@ -349,6 +388,7 @@
       <item itemvalue="Application.gmock_main" />
       <item itemvalue="Application.gtest" />
       <item itemvalue="Application.gtest_main" />
+      <item itemvalue="Application.CAHRR_mock" />
       <item itemvalue="Application.CAHRR_test" />
       <item itemvalue="Google Test.All Tests" />
     </list>
@@ -376,14 +416,12 @@
       <workItem from="1541607822597" duration="324000" />
       <workItem from="1541771746519" duration="660000" />
       <workItem from="1541774155038" duration="1419000" />
-      <workItem from="1541781486976" duration="19000" />
+      <workItem from="1541781486976" duration="236000" />
+      <workItem from="1541821989457" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.11.07 at 21h 46m 05s.xml">
-      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_Tests - 2018.11.09 at 22h 58m 59s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -411,9 +449,12 @@
     <history-entry file="All_Tests - 2018.11.10 at 00h 38m 19s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_Tests - 2018.11.10 at 00h 38m 28s.xml">
+      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24708000" />
+    <option name="totallyTimeSpent" value="25216000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,15 +466,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31218275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31196582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39285713" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39285713" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -442,7 +483,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004156" side_tool="true" weight="0.32886723" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49958438" weight="0.32857144" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49958438" visible="true" weight="0.32857144" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -503,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -691,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IMUSystem.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -805,11 +832,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_PIDAccumulator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="612">
           <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="234" selection-start-line="2" selection-start-column="234" selection-end-line="2" selection-end-column="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="285" selection-start-line="8" selection-start-column="285" selection-end-line="8" selection-end-column="285" />
         </state>
       </provider>
     </entry>
