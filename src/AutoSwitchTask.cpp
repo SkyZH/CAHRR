@@ -43,7 +43,6 @@ bool AutoSwitchTask::do_select(bool try_select) {
 }
 
 bool AutoSwitchTask::initialize() {
-    this->select(this->do_select(false));
-    return SwitchTask::initialize();
+    return SwitchTask::initialize(this->do_select(false));
 }
 
