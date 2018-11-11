@@ -11,7 +11,6 @@ namespace {
 
     class AutoSwitchTaskTest : public ::testing::Test {
     protected:
-        int selected_task = 0;
 
         AutoSwitchTaskTest() {
         }
