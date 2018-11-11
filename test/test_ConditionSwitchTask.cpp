@@ -7,7 +7,7 @@
 #include "MockTask.h"
 
 namespace {
-    bool selected = false;
+    bool task_selected = false;
     class ConditionSwitchTaskTest : public ::testing::Test {
     protected:
 
@@ -18,7 +18,7 @@ namespace {
         }
 
         void SetUp() override {
-            selected = false;
+            task_selected = false;
         }
     };
 
@@ -28,14 +28,14 @@ namespace {
 
         }
         bool when() {
-            return selected;
+            return task_selected;
         }
     };
     TEST(ConditionSwitchTaskTest, TestInitialize) {
         MockTask *task1 = new MockTask;
         MockTask *task2 = new MockTask;
         MockConditionSwitchTask* task = new MockConditionSwitchTask(task1, task2);
-        selected = false;
+        task_selected = false;
         EXPECT_TRUE(task->initialize());
         EXPECT_TRUE(task1->initialized);
         EXPECT_FALSE(task2->initialized);
@@ -45,7 +45,7 @@ namespace {
         MockTask *task1 = new MockTask;
         MockTask *task2 = new MockTask;
         MockConditionSwitchTask* task = new MockConditionSwitchTask(task1, task2);
-        selected = true;
+        task_selected = true;
         EXPECT_TRUE(task->initialize());
         EXPECT_FALSE(task1->initialized);
         EXPECT_TRUE(task2->initialized);
