@@ -22,7 +22,12 @@
     <list default="true" id="8b01f510-b8e9-4b6a-958b-d19c8bdb4534" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AutoTask.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AutoTask.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_Task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_Task.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_TimedTask.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_TimedTask.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/CMakeFiles/" />
@@ -37,58 +42,58 @@
     <session id="38594313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="134" />
+          <entry key="cpp" value="159" />
           <entry key="gitignore" value="2" />
-          <entry key="h" value="77" />
+          <entry key="h" value="89" />
           <entry key="in" value="1" />
           <entry key="md" value="1" />
-          <entry key="txt" value="17" />
+          <entry key="txt" value="20" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="18" />
-          <entry key="ObjectiveC" value="211" />
+          <entry key="CMakeLists.txt" value="21" />
+          <entry key="ObjectiveC" value="248" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="12822" />
+          <entry key="cpp" value="16007" />
           <entry key="gitignore" value="15" />
-          <entry key="h" value="4375" />
+          <entry key="h" value="4881" />
           <entry key="in" value="24" />
           <entry key="md" value="4" />
-          <entry key="txt" value="763" />
+          <entry key="txt" value="765" />
           <entry key="yml" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="787" />
-          <entry key="ObjectiveC" value="17197" />
+          <entry key="CMakeLists.txt" value="789" />
+          <entry key="ObjectiveC" value="20888" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="YAML" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="Google Test" value="130" />
+          <entry key="Google Test" value="183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -97,22 +102,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_TimedTask.cpp">
+        <entry file="file://$PROJECT_DIR$/src/SequentialTask.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+            <state relative-caret-position="288">
+              <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SequentialTask.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding>
-                <element signature="e#45#69#0" expanded="true" />
+                <element signature="e#109#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TimedTask.cpp">
+        <entry file="file://$PROJECT_DIR$/test/test_SequentialTask.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="166">
+              <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+              <folding>
+                <element signature="e#45#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,12 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mock/MockTask.cpp" />
-        <option value="$PROJECT_DIR$/test/test_Task.cpp" />
-        <option value="$PROJECT_DIR$/src/CANSystem.h" />
-        <option value="$PROJECT_DIR$/mock/MockCANSystem.cpp" />
-        <option value="$PROJECT_DIR$/mock/MockCANSystem.h" />
-        <option value="$PROJECT_DIR$/src/IMUSystem.h" />
         <option value="$PROJECT_DIR$/mock/MockIMUSystem.h" />
         <option value="$PROJECT_DIR$/mock/MockIMUSystem.cpp" />
         <option value="$PROJECT_DIR$/test/test_ChassisSystem.cpp" />
@@ -185,12 +196,9 @@
         <option value="$PROJECT_DIR$/src/PIDAccumulator.h" />
         <option value="$PROJECT_DIR$/src/PIDAccumulator.cpp" />
         <option value="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" />
-        <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/mock/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/AutoSwitchTask.h" />
         <option value="$PROJECT_DIR$/src/SwitchTask.h" />
-        <option value="$PROJECT_DIR$/src/AutoSwitchTask.cpp" />
         <option value="$PROJECT_DIR$/src/ConditionSwitchTask.h" />
         <option value="$PROJECT_DIR$/src/ConditionSwitchTask.cpp" />
         <option value="$PROJECT_DIR$/mock/MockConditionSwitchTask.h" />
@@ -201,8 +209,17 @@
         <option value="$PROJECT_DIR$/test/test_TriggerSwitchTask.cpp" />
         <option value="$PROJECT_DIR$/test/test_AutoSwitchTask.cpp" />
         <option value="$PROJECT_DIR$/src/TimedTask.h" />
-        <option value="$PROJECT_DIR$/test/test_TimedTask.cpp" />
         <option value="$PROJECT_DIR$/src/TimedTask.cpp" />
+        <option value="$PROJECT_DIR$/test/test_Task.cpp" />
+        <option value="$PROJECT_DIR$/src/Task.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/mock/TimedMockTask.h" />
+        <option value="$PROJECT_DIR$/src/AutoSwitchTask.cpp" />
+        <option value="$PROJECT_DIR$/test/test_TimedTask.cpp" />
+        <option value="$PROJECT_DIR$/src/SequentialTask.h" />
+        <option value="$PROJECT_DIR$/src/SequentialTask.cpp" />
+        <option value="$PROJECT_DIR$/test/test_SequentialTask.cpp" />
       </list>
     </option>
   </component>
@@ -212,7 +229,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="850" />
     <option name="width" value="830" />
     <option name="height" value="1050" />
@@ -231,6 +248,11 @@
             <path>
               <item name="CAHRR" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAHRR" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAHRR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAHRR" type="462c0819:PsiDirectoryNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAHRR" type="b2602c69:ProjectViewProjectNode" />
@@ -370,43 +392,44 @@
       <workItem from="1541781486976" duration="236000" />
       <workItem from="1541821989457" duration="884000" />
       <workItem from="1541863611668" duration="4984000" />
+      <workItem from="1542004701267" duration="4768000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.11.11 at 22h 25m 17s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 15h 57m 16s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 22h 25m 24s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 15h 58m 24s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 22h 26m 33s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 15h 58m 58s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 22h 28m 45s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 15h 59m 13s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 22h 29m 49s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 15h 59m 28s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 22h 30m 23s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 16h 04m 01s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 22h 30m 57s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 16h 04m 22s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 23h 10m 15s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 16h 04m 47s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 23h 11m 16s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 16h 06m 59s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_Tests - 2018.11.11 at 23h 12m 29s.xml">
+    <history-entry file="All_Tests - 2018.11.12 at 16h 07m 39s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34363000" />
+    <option name="totallyTimeSpent" value="41387000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,7 +444,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31562883" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15567766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -468,41 +491,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mock/MockCANSystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockCANSystem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockRemoteSystem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_RemoteSystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockRemoteSystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_RotateAccumulator.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3995">
@@ -531,13 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChassisSystem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -597,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="234" selection-start-line="2" selection-start-column="234" selection-end-line="2" selection-end-column="234" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RampAccumulator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -625,20 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockTask.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/MockTask.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -650,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Task.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -681,49 +634,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoSwitchTask.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#108#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/MockConditionSwitchTask.cpp" />
     <entry file="file://$PROJECT_DIR$/mock/MockConditionSwitchTask.h" />
-    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoTask.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoTask.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_Task.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConditionSwitchTask.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -735,30 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TriggerSwitchTask.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoSwitchTask.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_AutoSwitchTask.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="292" column="37" selection-start-line="292" selection-start-column="37" selection-end-line="292" selection-end-column="37" />
-          <folding>
-            <element signature="e#45#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,6 +694,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TriggerSwitchTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChassisSystem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Task.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="234" selection-start-line="2" selection-start-column="234" selection-end-line="2" selection-end-column="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_Task.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/TimedMockTask.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/TimedMockTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/MockTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/MockTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TimedTask.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -813,20 +774,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_TimedTask.cpp">
+    <entry file="file://$PROJECT_DIR$/src/TimedTask.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoTask.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoSwitchTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_AutoSwitchTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2492">
+          <caret line="306" column="44" selection-start-line="306" selection-start-column="44" selection-end-line="306" selection-end-column="44" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimedTask.cpp">
+    <entry file="file://$PROJECT_DIR$/src/AutoSwitchTask.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_TimedTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" selection-start-line="33" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="e#45#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SequentialTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SequentialTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="e#109#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_SequentialTask.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+          <folding>
+            <element signature="e#45#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

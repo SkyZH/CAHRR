@@ -17,6 +17,8 @@ public:
     virtual bool isEnd() { return false; }
 
     virtual bool update() = 0;
+
+    virtual ~Task() = default;
 };
 
 

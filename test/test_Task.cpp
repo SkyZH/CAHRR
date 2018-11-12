@@ -32,6 +32,7 @@ namespace {
         EXPECT_EQ(task->update_count, 1);
         EXPECT_TRUE(task->update());
         EXPECT_EQ(task->update_count, 2);
+        delete task;
     }
 }
 
