@@ -36,7 +36,6 @@ namespace {
     };
 
 
-
     TEST_F(SequentialTaskTest, TestInitialize) {
         MockCompletableTask *task1 = new MockCompletableTask;
         MockCompletableTask *task2 = new MockCompletableTask;
