@@ -6,6 +6,7 @@
 #include "MockTask.h"
 #include "TimedTask.h"
 #include "AutoSwitchTask.h"
+#include "SequentialTask.h"
 
 namespace {
     unsigned int task_time = 0;
@@ -93,6 +94,10 @@ namespace {
         EXPECT_TRUE(task->update());
         EXPECT_TRUE(task->isEnd());
         EXPECT_TRUE(task->destroy());
+    }
+
+    TEST_F(TimedTaskTest, TestWithSequentialTask) {
+        
     }
 }
 
