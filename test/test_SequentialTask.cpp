@@ -79,6 +79,7 @@ namespace {
         TimedMockTask *task3 = new TimedMockTask(4);
         TimedMockTask *task4 = new TimedMockTask(5);
         SequentialTask *task = new SequentialTask(std::vector <Task*> ({ task1, task2, task3, task4 }));
+        task_time = 0;
         EXPECT_TRUE(task->initialize());
         EXPECT_TRUE(task1->initialized);
         EXPECT_FALSE(task2->initialized);
@@ -188,6 +189,7 @@ namespace {
         TimedMockTask *task3 = new TimedMockTask(4);
         TimedMockTask *task4 = new TimedMockTask(5);
         SequentialTask *task = new SequentialTask(std::vector <Task*> ({ task1, task2, task3, task4 }));
+        task_time = 0;
         EXPECT_TRUE(task->initialize());
         test_sequence_update(task1, task2, task3, task4, task);
         test_sequence_update(task1, task2, task3, task4, task);
@@ -203,6 +205,7 @@ namespace {
         TimedMockTask *task3 = new TimedMockTask(4);
         TimedMockTask *task4 = new TimedMockTask(5);
         SequentialTask *task = new SequentialTask(std::vector <Task*> ({ task1, task2, task3, task4 }), false);
+        task_time = 0;
         EXPECT_TRUE(task->initialize());
         EXPECT_FALSE(task->isEnd());
         test_sequence_update(task1, task2, task3, task4, task);
