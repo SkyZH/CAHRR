@@ -222,4 +222,3 @@ namespace {
         EXPECT_TRUE(task->destroy());
     }
 }
-
