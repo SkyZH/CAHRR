@@ -139,7 +139,7 @@ namespace {
         EXPECT_EQ(task1->update_count, 1);
         EXPECT_FALSE(task->isEnd());
 
-        task_time = 2;
+        task_time += 2;
         EXPECT_TRUE(task->update());
         EXPECT_FALSE(task1->initialized);
         EXPECT_TRUE(task2->initialized);
