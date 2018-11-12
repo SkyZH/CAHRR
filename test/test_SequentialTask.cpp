@@ -171,7 +171,9 @@ namespace {
 
         task_time += 1;
         EXPECT_TRUE(task->update());
+        task_time += 1;
         EXPECT_TRUE(task->update());
+        task_time += 1;
         EXPECT_TRUE(task->update());
         EXPECT_FALSE(task1->initialized);
         EXPECT_FALSE(task2->initialized);
@@ -180,7 +182,7 @@ namespace {
         EXPECT_EQ(task4->update_count, 3);
         EXPECT_FALSE(task->isEnd());
 
-        task_time += 5;
+        task_time += 6;
     }
 
     TEST_F(SequentialTaskTest, TestUpdateMulti) {
