@@ -358,7 +358,7 @@ namespace {
         EXPECT_EQ(task3->update_count, 2);
         task2->ready();
         EXPECT_FALSE(task->isEnd());
-        
+
         EXPECT_TRUE(task->update());
         EXPECT_TRUE(task->update());
 
@@ -379,5 +379,117 @@ namespace {
         EXPECT_TRUE(task->initialize());
         EXPECT_TRUE(task->update());
         EXPECT_TRUE(task->destroy());
+    }
+
+    TEST_F(SequentialTaskTest, TestSequenceInSequence) {
+        MockCompletableTask *task1 = new MockCompletableTask;
+        MockCompletableTask *task2 = new MockCompletableTask;
+        MockCompletableTask *task3 = new MockCompletableTask;
+        MockCompletableTask *task4 = new MockCompletableTask;
+        SequentialTask *taskS1 = new SequentialTask(std::vector <Task*> ({ task1, task2 }), false);
+        SequentialTask *taskS2 = new SequentialTask(std::vector <Task*> ({ task3, task4 }), false);
+        SequentialTask *task = new SequentialTask(std::vector <Task*> ({ taskS1, taskS2 }), false);
+        ASSERT_TRUE(task->initialize());
+        ASSERT_TRUE(task->update());
+        EXPECT_TRUE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        task1->complete();
+
+        ASSERT_TRUE(task->update());
+        ASSERT_TRUE(task->update());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_TRUE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        task2->complete();
+        EXPECT_FALSE(task->isEnd());
+        task1->ready();
+        ASSERT_TRUE(task->update());
+        task2->ready();
+        ASSERT_TRUE(task->update());
+        EXPECT_FALSE(task->isEnd());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_TRUE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_FALSE(task->isEnd());
+        task3->complete();
+        ASSERT_TRUE(task->update());
+        ASSERT_TRUE(task->update());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_TRUE(task4->initialized);
+        task3->ready();
+        EXPECT_FALSE(task->isEnd());
+
+        task4->complete();
+        ASSERT_TRUE(task->update());
+
+
+        ASSERT_TRUE(task->update());
+        EXPECT_TRUE(task->isEnd());
+
+        ASSERT_TRUE(task->destroy());
+    }
+
+    TEST_F(SequentialTaskTest, TestSequenceInSequenceCycle) {
+        MockCompletableTask *task1 = new MockCompletableTask;
+        MockCompletableTask *task2 = new MockCompletableTask;
+        MockCompletableTask *task3 = new MockCompletableTask;
+        MockCompletableTask *task4 = new MockCompletableTask;
+        SequentialTask *taskS1 = new SequentialTask(std::vector <Task*> ({ task1, task2 }), false);
+        SequentialTask *taskS2 = new SequentialTask(std::vector <Task*> ({ task3, task4 }), false);
+        SequentialTask *task = new SequentialTask(std::vector <Task*> ({ taskS1, taskS2 }), true);
+        ASSERT_TRUE(task->initialize());
+
+        for (int i = 0; i < 10; i++) {
+
+            ASSERT_TRUE(task->update());
+            EXPECT_TRUE(task1->initialized);
+            EXPECT_FALSE(task2->initialized);
+            EXPECT_FALSE(task3->initialized);
+            EXPECT_FALSE(task4->initialized);
+            task1->complete();
+
+            ASSERT_TRUE(task->update());
+            ASSERT_TRUE(task->update());
+            EXPECT_FALSE(task1->initialized);
+            EXPECT_TRUE(task2->initialized);
+            EXPECT_FALSE(task3->initialized);
+            EXPECT_FALSE(task4->initialized);
+            task2->complete();
+            EXPECT_FALSE(task->isEnd());
+            task1->ready();
+            ASSERT_TRUE(task->update());
+            task2->ready();
+            ASSERT_TRUE(task->update());
+            EXPECT_FALSE(task->isEnd());
+            EXPECT_FALSE(task1->initialized);
+            EXPECT_FALSE(task2->initialized);
+            EXPECT_TRUE(task3->initialized);
+            EXPECT_FALSE(task4->initialized);
+            EXPECT_FALSE(task->isEnd());
+            task3->complete();
+            ASSERT_TRUE(task->update());
+            ASSERT_TRUE(task->update());
+            EXPECT_FALSE(task1->initialized);
+            EXPECT_FALSE(task2->initialized);
+            EXPECT_FALSE(task3->initialized);
+            EXPECT_TRUE(task4->initialized);
+            task3->ready();
+            EXPECT_FALSE(task->isEnd());
+
+            task4->complete();
+            ASSERT_TRUE(task->update());
+
+
+            ASSERT_TRUE(task->update());
+            EXPECT_FALSE(task->isEnd());
+        }
+
+        ASSERT_TRUE(task->destroy());
     }
 }
