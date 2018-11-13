@@ -9,9 +9,9 @@
 
 class TimedTask : public Task {
 private:
-    bool initialized;
+    bool _timed_initialized;
     unsigned int total_time;
-    unsigned int start_time;
+    unsigned int _timed_start_time;
 public:
     TimedTask(unsigned int total_time);
 

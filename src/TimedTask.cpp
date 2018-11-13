@@ -5,19 +5,19 @@
 #include "TimedTask.h"
 
 bool TimedTask::initialize() {
-    this->initialized = true;
-    this->start_time = this->time();
+    this->_timed_initialized = true;
+    this->_timed_start_time = this->time();
     return true;
 }
 
 bool TimedTask::destroy() {
-    this->initialized = false;
+    this->_timed_initialized = false;
     return true;
 }
 
 bool TimedTask::isEnd() {
-    if (!this->initialized) return false;
-    return this->time() - this->start_time >= this->total_time;
+    if (!this->_timed_initialized) return false;
+    return this->time() - this->_timed_start_time >= this->total_time;
 }
 
 TimedTask::TimedTask(unsigned int total_time) : Task(), total_time(total_time) {

@@ -25,10 +25,12 @@ public:
         if (this->cycle) {
             task->destroy();
             task->initialize();
+            this->do_reset = false;
             return task->update();
         }
         return true;
     }
+
     bool destroy() {
         this->do_reset = false;
         return true;
