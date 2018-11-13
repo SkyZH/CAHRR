@@ -10,9 +10,9 @@ addons:
 before_script:
   - wget -qO- "https://cmake.org/files/v3.12/cmake-3.12.2-Linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C ~/.local
 script:
-  - cmake -H. -Bbuild
+  - cmake -H. -Bbuild  -DCMAKE_BUILD_TYPE=$BUILD_TYPE
   - cd build
-  - cmake --build . -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+  - cmake --build .
   - ./test/CAHRR_test
 env:
   - BUILD_TYPE=DEBUG
