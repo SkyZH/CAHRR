@@ -3,9 +3,6 @@ project(CAHRR)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
-
 add_subdirectory(test)
 add_subdirectory(mock)
 
@@ -13,6 +10,3 @@ add_library(CAHRR src/AvgAccumulator.cpp src/AvgAccumulator.h src/Task.cpp src/T
 
 add_executable(CAHRR_main main.cpp)
 target_link_libraries(CAHRR_main CAHRR)
-
-message("${CMAKE_CXX_FLAGS_DEBUG}")
-message("${CMAKE_CXX_FLAGS_RELEASE}")
