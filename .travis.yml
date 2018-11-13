@@ -1,6 +1,8 @@
 language:
   - cpp
-
+compiler:
+- clang
+- gcc
 addons:
   apt:
     sources:
@@ -10,5 +12,8 @@ before_script:
 script:
   - cmake -H. -Bbuild
   - cd build
-  - cmake --build .
+  - cmake --build . -DCMAKE_BUILD_TYPE=$BUILD_TYPE
   - ./test/CAHRR_test
+matrix:
+  - BUILD_TYPE=DEBUG
+  - BUILD_TYPE=RELEASE

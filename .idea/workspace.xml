@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b01f510-b8e9-4b6a-958b-d19c8bdb4534" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SequentialTask.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/SequentialTask.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_TimedTask.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_TimedTask.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
@@ -56,7 +57,7 @@
           <entry key="in" value="1" />
           <entry key="md" value="1" />
           <entry key="txt" value="23" />
-          <entry key="yml" value="2" />
+          <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -64,31 +65,31 @@
           <entry key="CMakeLists.txt" value="24" />
           <entry key="ObjectiveC" value="263" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="YAML" value="2" />
+          <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="17825" />
+          <entry key="cpp" value="17832" />
           <entry key="gitignore" value="15" />
           <entry key="h" value="4971" />
           <entry key="in" value="24" />
           <entry key="md" value="4" />
-          <entry key="txt" value="820" />
-          <entry key="yml" value="45" />
+          <entry key="txt" value="853" />
+          <entry key="yml" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="844" />
-          <entry key="ObjectiveC" value="22796" />
+          <entry key="CMakeLists.txt" value="877" />
+          <entry key="ObjectiveC" value="22803" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="YAML" value="45" />
+          <entry key="YAML" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="Google Test" value="224" />
+          <entry key="Google Test" value="225" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -147,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_TimedTask.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="258" column="36" selection-start-line="258" selection-start-column="36" selection-end-line="258" selection-end-column="36" />
+            <state relative-caret-position="229">
+              <caret line="230" column="26" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
               <folding>
                 <element signature="e#45#69#0" expanded="true" />
               </folding>
@@ -159,11 +160,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -267,13 +277,13 @@
         <option value="$PROJECT_DIR$/src/ParallelTask.h" />
         <option value="$PROJECT_DIR$/src/ParallelTask.cpp" />
         <option value="$PROJECT_DIR$/test/test_ParallelTask.cpp" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/test/test_SequentialTask.cpp" />
         <option value="$PROJECT_DIR$/src/TimedTask.cpp" />
         <option value="$PROJECT_DIR$/src/TimedTask.h" />
         <option value="$PROJECT_DIR$/src/SequentialTask.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/test/test_TimedTask.cpp" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -479,14 +489,11 @@
       <workItem from="1541863611668" duration="4984000" />
       <workItem from="1542004701267" duration="5616000" />
       <workItem from="1542014933215" duration="2878000" />
-      <workItem from="1542082960049" duration="1068000" />
+      <workItem from="1542082960049" duration="1435000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.11.12 at 21h 08m 01s.xml">
-      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_Tests - 2018.11.13 at 12h 23m 18s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -514,9 +521,12 @@
     <history-entry file="All_Tests - 2018.11.13 at 12h 41m 16s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_Tests - 2018.11.13 at 12h 43m 50s.xml">
+      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46181000" />
+    <option name="totallyTimeSpent" value="46548000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -835,13 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_SwitchTask.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -870,13 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoSwitchTask.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -933,18 +929,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoSwitchTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_TimedTask.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="258" column="36" selection-start-line="258" selection-start-column="36" selection-end-line="258" selection-end-column="36" />
+        <state relative-caret-position="229">
+          <caret line="230" column="26" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>

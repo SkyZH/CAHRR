@@ -228,6 +228,7 @@ namespace {
         ASSERT_TRUE(task->update());
         EXPECT_FALSE(task1->initialized);
         EXPECT_TRUE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
         task_time += 1;
         ASSERT_TRUE(task->update());
         EXPECT_FALSE(task1->initialized);
