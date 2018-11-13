@@ -4,7 +4,7 @@
 
 #include "SwitchTask.h"
 
-SwitchTask::SwitchTask(Task *task1, Task *task2) : task1(task1), task2(task2) {
+SwitchTask::SwitchTask(Task *task1, Task *task2) : task1(task1), task2(task2), selected(false) {
 
 }
 

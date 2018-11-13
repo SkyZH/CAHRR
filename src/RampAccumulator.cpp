@@ -4,7 +4,7 @@
 
 #include "RampAccumulator.h"
 
-RampAccumulator::RampAccumulator(long long ramp_limit) : ramp_limit(ramp_limit), do_reset(true) {
+RampAccumulator::RampAccumulator(long long ramp_limit) : ramp_limit(ramp_limit), do_reset(true), lst_data(0) {
 }
 
 void RampAccumulator::reset() {

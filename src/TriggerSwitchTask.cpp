@@ -4,7 +4,7 @@
 
 #include "TriggerSwitchTask.h"
 
-TriggerSwitchTask::TriggerSwitchTask(Task *task1, Task *task2) : SwitchTask(task1, task2) {
+TriggerSwitchTask::TriggerSwitchTask(Task *task1, Task *task2) : SwitchTask(task1, task2), lst_triggered(false) {
 
 }
 

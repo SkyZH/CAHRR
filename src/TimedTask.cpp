@@ -20,5 +20,6 @@ bool TimedTask::isEnd() {
     return this->time() - this->_timed_start_time >= this->total_time;
 }
 
-TimedTask::TimedTask(unsigned int total_time) : Task(), total_time(total_time) {
+TimedTask::TimedTask(unsigned int total_time)
+        : Task(), total_time(total_time), _timed_initialized(false), _timed_start_time(0) {
 }

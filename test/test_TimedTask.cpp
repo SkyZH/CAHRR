@@ -136,6 +136,7 @@ namespace {
 
     TEST_F(TimedTaskTest, TestIsEnd) {
         MockTimedTask *task = new MockTimedTask(5);
+        task->initialize();
         EXPECT_FALSE(task->isEnd());
     }
 

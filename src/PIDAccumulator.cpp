@@ -25,6 +25,10 @@ bool PIDAccumulator::reset() {
     return true;
 }
 
+PIDAccumulator::PIDAccumulator() : Kp(0), Ki(0), Kd(0), output_min(0), output_max(0), prev_error(0), total_error(0) {
+
+}
+
 double PIDRateAccumulator::calc(double error) {
     if (Kp != 0) {
         total_error = PID_clamp(total_error + error,

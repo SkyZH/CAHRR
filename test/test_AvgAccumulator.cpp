@@ -32,6 +32,7 @@ namespace {
         accumulator->data(3);
         accumulator->data(4);
         EXPECT_EQ(accumulator->sum(), 3);
+        EXPECT_EQ(accumulator->sum(), 0);
         EXPECT_EQ(accumulator->n, 0);
         EXPECT_EQ(accumulator->sum_data, 0);
     }

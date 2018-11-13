@@ -12,7 +12,7 @@ protected:
     double output_min, output_max;
     double prev_error, total_error;
 public:
-    PIDAccumulator() = default;
+    PIDAccumulator();
 
     bool set_pid(double Kp, double Ki, double Kd);
 

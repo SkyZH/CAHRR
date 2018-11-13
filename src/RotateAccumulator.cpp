@@ -4,7 +4,8 @@
 
 #include "RotateAccumulator.h"
 
-RotateAccumulator::RotateAccumulator(long long max_data) : max_data(max_data) {
+RotateAccumulator::RotateAccumulator(long long max_data) : max_data(max_data), round(0), overflow(0), lst_data(0),
+                                                           offset_data(0), do_calibrate(false) {
     this->reset();
     this->calibrate();
 }
@@ -20,7 +21,7 @@ void RotateAccumulator::data(long long data) {
     }
     long long __data = ((data - offset_data) % this->max_data + this->max_data) % this->max_data;
     if (__data - this->lst_data > max_data / 2) this->round--;
-    else if (__data - this->lst_data < - max_data / 2) this->round++;
+    else if (__data - this->lst_data < -max_data / 2) this->round++;
     this->overflow = __data;
     this->lst_data = __data;
 }
