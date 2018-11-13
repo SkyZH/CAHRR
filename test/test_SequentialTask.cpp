@@ -275,6 +275,101 @@ namespace {
         EXPECT_TRUE(task->destroy());
     }
 
+    TEST_F(SequentialTaskTest, TestCompleteUpdateWithInterrupt) {
+        MockCompletableTask *task1 = new MockCompletableTask;
+        MockCompletableTask *task2 = new MockCompletableTask;
+        MockCompletableTask *task3 = new MockCompletableTask;
+        MockCompletableTask *task4 = new MockCompletableTask;
+        SequentialTask *task = new SequentialTask(std::vector <Task*> ({ task1, task2, task3, task4 }));
+        EXPECT_TRUE(task->initialize());
+        EXPECT_TRUE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_EQ(task2->initialize_count, 0);
+        EXPECT_EQ(task1->initialize_count, 1);
+        EXPECT_TRUE(task->update());
+        EXPECT_EQ(task1->update_count, 1);
+        EXPECT_TRUE(task1->initialized);
+        task1->complete();
+        EXPECT_TRUE(task->update());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_TRUE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_EQ(task2->update_count, 1);
+        task1->ready();
+        EXPECT_FALSE(task->isEnd());
+
+        task2->complete();
+        EXPECT_TRUE(task->update());
+        EXPECT_TRUE(task->update());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_TRUE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_EQ(task3->update_count, 2);
+        task2->ready();
+        EXPECT_FALSE(task->isEnd());
+
+        ASSERT_TRUE(task->destroy());
+        ASSERT_TRUE(task->initialize());
+        test_sequence_update_complete(task1, task2, task3, task4, task);
+        test_sequence_update_complete(task1, task2, task3, task4, task);
+        test_sequence_update_complete(task1, task2, task3, task4, task);
+        EXPECT_TRUE(task->update());
+        EXPECT_FALSE(task->isEnd());
+        EXPECT_TRUE(task->destroy());
+    }
+
+    TEST_F(SequentialTaskTest, TestCompleteUpdateNoCycleWithInterrupt) {
+        MockCompletableTask *task1 = new MockCompletableTask;
+        MockCompletableTask *task2 = new MockCompletableTask;
+        MockCompletableTask *task3 = new MockCompletableTask;
+        MockCompletableTask *task4 = new MockCompletableTask;
+        SequentialTask *task = new SequentialTask(std::vector <Task*> ({ task1, task2, task3, task4 }), false);
+        EXPECT_TRUE(task->initialize());
+        EXPECT_TRUE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_EQ(task2->initialize_count, 0);
+        EXPECT_EQ(task1->initialize_count, 1);
+        EXPECT_TRUE(task->update());
+        EXPECT_EQ(task1->update_count, 1);
+        EXPECT_TRUE(task1->initialized);
+        task1->complete();
+        EXPECT_TRUE(task->update());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_TRUE(task2->initialized);
+        EXPECT_FALSE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_EQ(task2->update_count, 1);
+        task1->ready();
+        EXPECT_FALSE(task->isEnd());
+
+        task2->complete();
+        EXPECT_TRUE(task->update());
+        EXPECT_TRUE(task->update());
+        EXPECT_FALSE(task1->initialized);
+        EXPECT_FALSE(task2->initialized);
+        EXPECT_TRUE(task3->initialized);
+        EXPECT_FALSE(task4->initialized);
+        EXPECT_EQ(task3->update_count, 2);
+        task2->ready();
+        EXPECT_FALSE(task->isEnd());
+        
+        EXPECT_TRUE(task->update());
+        EXPECT_TRUE(task->update());
+
+        ASSERT_TRUE(task->destroy());
+        ASSERT_TRUE(task->initialize());
+        test_sequence_update(task1, task2, task3, task4, task);
+        EXPECT_TRUE(task->update());
+        EXPECT_TRUE(task->isEnd());
+        EXPECT_TRUE(task->destroy());
+    }
+
     TEST_F(SequentialTaskTest, TestDestroy) {
         MockCompletableTask *task1 = new MockCompletableTask;
         MockCompletableTask *task2 = new MockCompletableTask;

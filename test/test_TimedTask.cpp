@@ -136,7 +136,7 @@ namespace {
 
     TEST_F(TimedTaskTest, TestIsEnd) {
         MockTimedTask *task = new MockTimedTask(5);
-        task->initialize();
+        ASSERT_TRUE(task->initialize());
         EXPECT_FALSE(task->isEnd());
     }
 
@@ -199,7 +199,7 @@ namespace {
         sequence_time_test(task1, task2, task3, task4, task);
         EXPECT_FALSE(task->isEnd());
     }
-
+    
     TEST_F(TimedTaskTest, TestWithSequentialTaskNonCycle) {
         MockTimedMockTask *task1 = new MockTimedMockTask(1);
         MockTimedMockTask *task2 = new MockTimedMockTask(2);
