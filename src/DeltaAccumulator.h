@@ -19,7 +19,7 @@ public:
         if (this->do_reset) {
             this->do_reset = false;
             this->lst_data = data;
-            return data;
+            return 0;
         } else {
             T result = data - lst_data;
             lst_data = data;

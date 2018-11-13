@@ -23,9 +23,9 @@ namespace {
     TEST(DeltaAccumulatorTest, TestDelta) {
         DeltaAccumulator<long long> *accumulator = new DeltaAccumulator<long long>;
         accumulator->reset();
-        EXPECT_EQ(accumulator->delta(2333), 2333);
+        EXPECT_EQ(accumulator->delta(2333), 0);
         accumulator->reset();
-        EXPECT_EQ(accumulator->delta(23333), 23333);
+        EXPECT_EQ(accumulator->delta(23333), 0);
         EXPECT_EQ(accumulator->delta(33333), 10000);
     }
     TEST(DeltaAccumulatorTest, TestResetDouble) {
@@ -45,9 +45,9 @@ namespace {
     TEST(DeltaAccumulatorTest, TestDeltaDouble) {
         DeltaAccumulator<double> *accumulator = new DeltaAccumulator<double>;
         accumulator->reset();
-        EXPECT_NEAR(accumulator->delta(2333.233), 2333.233, 1e-6);
+        EXPECT_NEAR(accumulator->delta(2333.233), 0, 1e-6);
         accumulator->reset();
-        EXPECT_NEAR(accumulator->delta(23333.233), 23333.233, 1e-6);
+        EXPECT_NEAR(accumulator->delta(23333.233), 0, 1e-6);
         EXPECT_NEAR(accumulator->delta(33333.533), 10000.3, 1e-6);
     }
 }
