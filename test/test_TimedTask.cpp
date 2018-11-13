@@ -41,7 +41,7 @@ namespace {
             return true;
         }
 
-        unsigned int time() {
+        virtual unsigned int time() {
             return task_time;
         }
     };
