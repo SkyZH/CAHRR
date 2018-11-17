@@ -2,14 +2,14 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="CAHRR" targetName="gmock" />
+      <config projectName="CAHRR" targetName="gtest" />
+      <config projectName="CAHRR" targetName="CAHRR_main" />
       <config projectName="CAHRR" targetName="CAHRR_mock" />
       <config projectName="CAHRR" targetName="gmock_main" />
-      <config projectName="CAHRR" targetName="CAHRR_main" />
-      <config projectName="CAHRR" targetName="gtest_main" />
-      <config projectName="CAHRR" targetName="gtest" />
-      <config projectName="CAHRR" targetName="CAHRR" />
       <config projectName="CAHRR" targetName="CAHRR_test" />
+      <config projectName="CAHRR" targetName="CAHRR" />
+      <config projectName="CAHRR" targetName="gtest_main" />
+      <config projectName="CAHRR" targetName="gmock" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8b01f510-b8e9-4b6a-958b-d19c8bdb4534" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/MockUltrasonicSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mock/MockUltrasonicSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RampAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/RampAccumulator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RampAccumulator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/RampAccumulator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_RampAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_RampAccumulator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_UltrasonicSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_UltrasonicSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PIDAccumulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PIDAccumulator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/CMakeFiles/" />
@@ -40,23 +38,25 @@
     <session id="38594313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="8" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="202" />
+          <entry key="cpp" value="206" />
           <entry key="gitignore" value="2" />
-          <entry key="h" value="119" />
+          <entry key="h" value="120" />
           <entry key="in" value="1" />
           <entry key="md" value="1" />
           <entry key="txt" value="25" />
@@ -66,16 +66,16 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="26" />
-          <entry key="ObjectiveC" value="321" />
+          <entry key="ObjectiveC" value="326" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="20112" />
+          <entry key="cpp" value="20237" />
           <entry key="gitignore" value="15" />
-          <entry key="h" value="5695" />
+          <entry key="h" value="5735" />
           <entry key="in" value="24" />
           <entry key="md" value="4" />
           <entry key="txt" value="853" />
@@ -85,14 +85,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="877" />
-          <entry key="ObjectiveC" value="25807" />
+          <entry key="ObjectiveC" value="25972" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="YAML" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="Google Test" value="254" />
+          <entry key="Google Test" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -101,49 +101,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/MockUltrasonicSystem.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_RampAccumulator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="476">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RampAccumulator.cpp">
+        <entry file="file://$PROJECT_DIR$/src/utils.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RampAccumulator.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#120#132#0" expanded="true" />
+                <element signature="e#98#110#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/MockUltrasonicSystem.h">
+        <entry file="file://$PROJECT_DIR$/test/test_utils.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#45#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding>
+                <element signature="e#45#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_UltrasonicSystem.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -226,9 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/RemoteSystem.h" />
-        <option value="$PROJECT_DIR$/mock/MockRemoteSystem.h" />
-        <option value="$PROJECT_DIR$/mock/MockRemoteSystem.cpp" />
         <option value="$PROJECT_DIR$/src/RotateAccumulator.h" />
         <option value="$PROJECT_DIR$/test/test_PIDAccumulator.cpp" />
         <option value="$PROJECT_DIR$/mock/CMakeLists.txt" />
@@ -258,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/RotateAccumulator.cpp" />
         <option value="$PROJECT_DIR$/src/TimedTask.cpp" />
         <option value="$PROJECT_DIR$/src/PIDAccumulator.h" />
-        <option value="$PROJECT_DIR$/src/PIDAccumulator.cpp" />
         <option value="$PROJECT_DIR$/test/test_TimedTask.cpp" />
         <option value="$PROJECT_DIR$/test/test_SequentialTask.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
@@ -277,6 +279,10 @@
         <option value="$PROJECT_DIR$/src/RampAccumulator.cpp" />
         <option value="$PROJECT_DIR$/src/RampAccumulator.h" />
         <option value="$PROJECT_DIR$/test/test_RampAccumulator.cpp" />
+        <option value="$PROJECT_DIR$/src/utils.cpp" />
+        <option value="$PROJECT_DIR$/src/utils.h" />
+        <option value="$PROJECT_DIR$/test/test_utils.cpp" />
+        <option value="$PROJECT_DIR$/src/PIDAccumulator.cpp" />
       </list>
     </option>
   </component>
@@ -316,7 +322,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,6 +348,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -489,13 +495,15 @@
       <workItem from="1542082960049" duration="3199000" />
       <workItem from="1542386759301" duration="931000" />
       <workItem from="1542429254113" duration="929000" />
+      <workItem from="1542432788033" duration="211000" />
+      <workItem from="1542435325017" duration="600000" />
+      <workItem from="1542436690411" duration="288000" />
+      <workItem from="1542440590683" duration="16000" />
+      <workItem from="1542440958409" duration="199000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests - 2018.11.13 at 19h 46m 22s.xml">
-      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_Tests - 2018.11.13 at 19h 46m 30s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -523,9 +531,12 @@
     <history-entry file="All_Tests - 2018.11.17 at 00h 51m 30s.xml">
       <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_Tests - 2018.11.17 at 15h 52m 11s.xml">
+      <configuration name="All Tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54283000" />
+    <option name="totallyTimeSpent" value="55597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,12 +551,12 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17582418" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41122448" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41122448" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -587,27 +598,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test_TriggerSwitchTask.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_AutoSwitchTask.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="287" column="20" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RotateAccumulator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -654,13 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="27" column="116" selection-start-line="27" selection-start-column="116" selection-end-line="27" selection-end-column="116" />
         </state>
       </provider>
     </entry>
@@ -833,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_UltrasonicSystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_AvgAccumulator.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
@@ -908,10 +884,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_RampAccumulator.cpp">
+    <entry file="file://$PROJECT_DIR$/src/utils.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_RampAccumulator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#98#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_UltrasonicSystem.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_utils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#45#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIDAccumulator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="e#45#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
