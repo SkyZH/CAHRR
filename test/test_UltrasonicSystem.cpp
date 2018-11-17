@@ -40,6 +40,7 @@ namespace {
         now_time = 100;
         ASSERT_TRUE(usSystem->trigger());
         EXPECT_TRUE(ultrasonic_data_sent);
+        ultrasonic_data_sent = false;
         now_time = 200;
         ASSERT_TRUE(usSystem->trigger());
         EXPECT_TRUE(usSystem->update());
@@ -49,9 +50,13 @@ namespace {
         ASSERT_TRUE(usSystem->trigger());
         EXPECT_TRUE(usSystem->update());
         EXPECT_EQ(usSystem->time(), 200);
+        ultrasonic_data_sent = false;
         EXPECT_TRUE(usSystem->update());
+        EXPECT_TRUE(ultrasonic_data_sent);
         EXPECT_EQ(usSystem->time(), 0);
     }
+
+
 
 }
 

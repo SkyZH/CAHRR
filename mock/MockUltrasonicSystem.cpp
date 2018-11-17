@@ -14,7 +14,6 @@ MockUltrasonicSystem::MockUltrasonicSystem() : UltrasonicSystem(), delta_time(0)
 
 bool MockUltrasonicSystem::trigger() {
     this->delta_time = now_time - lst_sent;
-    lst_sent = now_time;
     this->data_available = true;
     this->send_data();
     return true;
@@ -31,6 +30,7 @@ bool MockUltrasonicSystem::update() {
         this->available_time = this->delta_time;
     } else {
         this->available_time = 0;
+        this->send_data();
     }
     return true;
 }
