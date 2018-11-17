@@ -30,4 +30,18 @@ namespace {
         EXPECT_EQ(cycle_err(8192 * 2, 0, 100, 8292), 0);
         EXPECT_EQ(cycle_err(100, -300, 100, 8192), 400);
     }
+
+    TEST(UtilsTest, TestCycleErrDouble) {
+        EXPECT_EQ(cycle_err_double(100, 0, 0, 8192), 100);
+        EXPECT_EQ(cycle_err_double(8000, 0, 0, 8192), -192);
+        EXPECT_EQ(cycle_err_double(8000, 4000, 0, 8192), 4000);
+        EXPECT_EQ(cycle_err_double(8192 * 2, 0, 0, 8192), 0);
+        EXPECT_EQ(cycle_err_double(100, -300, 0, 8192), 400);
+        EXPECT_EQ(cycle_err_double(100, 0, 100, 8192), 100);
+        EXPECT_EQ(cycle_err_double(8000, 0, 100, 8192), -92);
+        EXPECT_EQ(cycle_err_double(8000, 4000, 100, 8192), 4000);
+        EXPECT_EQ(cycle_err_double(8192 * 2, 0, 100, 8292), 0);
+        EXPECT_EQ(cycle_err_double(100, -300, 100, 8192), 400);
+        EXPECT_EQ(cycle_err_double(0, 20.5, 0, 8192), -20.5);
+    }
 }

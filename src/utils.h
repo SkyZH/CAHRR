@@ -32,4 +32,21 @@ inline T cycle_err(T target, T current, T min, T max) {
     return cycle_err(err, range);
 }
 
+inline double cycle_err_double(double err, double range) {
+    if (fabs(err) > range / 2) {
+        if (err > 0) {
+            return err - range;
+        } else {
+            return err + range;
+        }
+    }
+    return err;
+}
+
+inline double cycle_err_double(double target, double current, double min, double max) {
+    double range = max - min;
+    double err = fmod((target - current), range);
+    return cycle_err_double(err, range);
+}
+
 #endif //CAHRR_UTILS_H
