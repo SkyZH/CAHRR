@@ -4,8 +4,32 @@
 
 #ifndef CAHRR_UTILS_H
 #define CAHRR_UTILS_H
-template <typename T>
+
+#include <cmath>
+
+template<typename T>
 inline T clamp(T in, T min, T max) {
     return (in < min ? min : (in > max ? max : in));
 }
+
+template<typename T>
+inline T cycle_err(T err, T range) {
+    if (abs(err) > range / 2) {
+        if (err > 0) {
+            return err - range;
+        } else {
+            return err + range;
+        }
+    }
+    return err;
+}
+
+
+template<typename T>
+inline T cycle_err(T target, T current, T min, T max) {
+    T range = max - min;
+    T err = (target - current) % range;
+    return cycle_err(err, range);
+}
+
 #endif //CAHRR_UTILS_H
