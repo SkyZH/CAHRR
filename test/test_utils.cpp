@@ -44,4 +44,14 @@ namespace {
         EXPECT_EQ(cycle_err_double(100, -300, 100, 8192), 400);
         EXPECT_EQ(cycle_err_double(0, 20.5, 0, 8192), -20.5);
     }
+
+    TEST(UtilsTest, TestMapRange) {
+        EXPECT_EQ(map_range(100, 0, 200, 0, 400), 200);
+        EXPECT_EQ(map_range(100, 100, 200, 0, 400), 0);
+    }
+
+    TEST(UtilsTest, TestMapRangeDouble) {
+        EXPECT_EQ(map_range<double>(100, 0, 200, 0, 400), 200);
+        EXPECT_EQ(map_range<double>(0.5, 0, 1, 0, 400), 200);
+    }
 }

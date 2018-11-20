@@ -49,4 +49,11 @@ inline double cycle_err_double(double target, double current, double min, double
     return cycle_err_double(err, range);
 }
 
+template <typename T>
+inline T map_range(T in, T in_min, T in_max, T out_min, T out_max) {
+    T out_range = out_max - out_min;
+    T in_range = in_max - in_min;
+    return (in - in_min) * out_range / in_range + out_min;
+}
+
 #endif //CAHRR_UTILS_H
