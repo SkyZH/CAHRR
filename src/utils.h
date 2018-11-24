@@ -24,7 +24,6 @@ inline T cycle_err(T err, T range) {
     return err;
 }
 
-
 template<typename T>
 inline T cycle_err(T target, T current, T min, T max) {
     T range = max - min;
